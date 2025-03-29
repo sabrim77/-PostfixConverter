@@ -1,0 +1,11 @@
+nano A.y
+
+nano B.l
+
+bison -d A.y
+
+flex B.l
+
+gcc -o translator lex.yy.c A.tab.c -lfl
+
+./translator
